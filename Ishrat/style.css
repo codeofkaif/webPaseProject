@@ -1,0 +1,207 @@
+*{
+    padding: 0px 2px 0px 2px;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: jost;
+    
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+
+}
+header{
+    background-color:#6d635dbd;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: rgb(0,0,0,0.05) 0px 6px 24px 0px,rgb(0,0,0,0.08) 0px 0px 0px 1px;;
+
+}
+
+
+nav ul {
+    list-style-type: none;
+}
+a {
+    padding: 20px 20px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    
+
+}
+/* a:after{
+    color: rgb(34, 34, 186);
+    content: "";
+    position: absolute;
+    bottom: -0.3rem;
+    left: 0;
+    width: 0%;
+    border-bottom: 0.2rem solid rgb(34, 34, 186) ;
+    transition: all 0.2s linear;
+
+
+}
+& li a:hover:after{ 
+    width: 100%;
+    font-weight: bold;
+
+} */
+& li a:hover{
+    color: blue;
+}
+section{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,00.3)),
+    url(image/firstDayOfLife.jpg);
+    background-size: cover;/* you can use background-size: cover; to make the background image cover the entire element while maintaining its aspect ratio. thiat the image fills the container without distortion  */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.section-2{
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,00.3)),
+    url(image/nani_ghar.jpg);
+    background-size: cover;/* you can use background-size: cover; to make the background image cover the entire element while maintaining its aspect ratio. thiat the image fills the container without distortion  */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.section-3{
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,00.3)),
+    url(image/mastiTime.jpg);
+    background-size: cover;/* you can use background-size: cover; to make the background image cover the entire element while maintaining its aspect ratio. thiat the image fills the container without distortion  */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.section-4{
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,00.3)),
+    url(image/whileCallingHerAbbu.jpg);
+    background-size: cover;/* you can use background-size: cover; to make the background image cover the entire element while maintaining its aspect ratio. thiat the image fills the container without distortion  */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.section-5{
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,00.3)),
+    url(image/bikeDriveWithChoteAbbu.jpg);
+    background-size: cover;/* you can use background-size: cover; to make the background image cover the entire element while maintaining its aspect ratio. thiat the image fills the container without distortion  */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+h1{
+    font-size: 64px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 2px 3px 2px #000;
+}
+p{
+    font-size: 20px;
+    color: #fff;
+}
+section div a{
+    text-decoration: none;
+    color: #4a44e9;
+}
+/* pop-up window */
+.pop-up_wind_detail_world{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content:center;
+    align-items:center;
+    opacity: 1;/* for the fade effect*/
+    animation: fadeOut o.4s forwards; /*default animation;*/
+    z-index: 10000;
+
+    
+
+}
+.pop-up_wind_detail_world:target{
+    display: flex;
+    animation: fadeIn o.4s forwards;
+}
+.pop-up_wind_detail_world_content{
+    /* background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,00.3)); */
+    background-color: rgba(0,0,0,0.5);
+    background-image: linear-gradient(#d1dded,#48575a);
+    padding: 30px 30px;
+    border-radius: 10px;
+
+    text-align:justify;
+    width: 80%;
+    max-width: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: scale(0.8); /*for zoom effect*/
+    animation: scaleUp 0.4s forwards;
+
+
+}
+
+.pop-up_wind_detail_world_content h1{
+    text-align: center;
+    text-shadow: 3px 4px 2px #3a7bd5;
+}
+
+.close_btn{
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    text-align: center;
+    background-color:white;
+    color:rgb(245, 12, 12)(239, 17, 17);
+    padding: 10px;
+    border-radius: 5px;
+
+
+}
+.pop-up_wind_detail_world:target .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+        }
+        100%{
+            opacity: 1;
+            }
+
+}
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+        }
+        100%{
+            opacity: 0;
+            }
+
+}
+@keyframes scaleUp{
+    0%{
+        transform: scale(0.5);
+        }
+        100%{
+            transform: scale(1);
+            }
+            }
+
